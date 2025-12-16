@@ -483,7 +483,7 @@ onUnmounted(() => {
                 </p>
             </div>
             <div v-for="q in questions" :key="q.id" class="question_item">
-                <p>{{ q.text }} (Categoría: {{ q.category }})</p>
+                <p>{{ q.text }}</p>
                 <div class="slider">
                     <input type="range" min="1" max="4" step="1" v-model.number="q.score" class="slider_input"
                         @change="handle_slider_change(q.score, q.id)" />
