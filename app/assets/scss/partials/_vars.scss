@@ -1,0 +1,12 @@
+$color_dark: #0a0a0a;
+$color_medium: #707070;
+$color_light: #f4f4f4;
+
+$palettes: (
+    default: (dark: $color_dark, medium: $color_medium, light: $color_light),
+    neuroticismo: (dark: #470b0b, medium: #ea4747, light: #fff5f5),
+    extraversion: (dark: #471a03, medium: #f49d1e, light: #fffbeb),
+    apertura_experiencia: (dark: #2b1066, medium: #8c62f4, light: #f5f5ff),
+    amabilidad: (dark: #03281e, medium: #0fb773, light: #ebfff4),
+    conciencia: (dark: #172751, medium: #458df4, light: #ebf3ff)
+);

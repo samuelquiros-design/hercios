@@ -1,0 +1,27 @@
+html {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-size: 100%;
+    font-family: "Geist";
+
+    body {
+        main {
+            h1 {
+                font-family: 'Parkinsans';
+                font-size: clamp(1.5rem, 2.5dvw, 2rem);
+                font-weight: 600;
+            }
+
+            h2 {
+                font-size: clamp(1.25rem, 2.5dvw, 1.5rem);
+                font-weight: 500;
+            }
+
+            h3 {
+                font-size: clamp(1rem, 2.5dvw, 1.25rem);
+                font-weight: 400;
+            }
+        }
+    }
+}
