@@ -16,13 +16,15 @@ export default defineNuxtConfig({
     }
   },
   app: {
+    baseURL: '/hercios/',
+    buildAssetsDir: 'assets',
     head: {
       title: 'Hercios',
       htmlAttrs: {
         lang: 'es',
       },
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: 'favicon.svg' },
+        { rel: 'icon', type: 'image/x-icon', href: '/hercios/favicon.svg' },
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200' }
       ]
     }
