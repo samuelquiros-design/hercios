@@ -132,7 +132,7 @@ const play_sound = (score, id) => {
     if (audio_player.value.src.endsWith(audio_file_name)) {
         audio_player.value.pause();
         audio_player.value.currentTime = 0;
-        audio_player.value.play().catch(e => console.error("Error al reproducir el sonido:", e));
+        audio_player.value.play().catch(e => console.error("Error al reproducir el sonido.", e));
         return;
     }
 
@@ -141,7 +141,7 @@ const play_sound = (score, id) => {
     audio_player.value.oncanplay = () => {
         audio_player.value.pause();
         audio_player.value.currentTime = 0;
-        audio_player.value.play().catch(e => console.error("Error al reproducir el sonido:", e));
+        audio_player.value.play().catch(e => console.error("Error al reproducir el sonido.", e));
         audio_player.value.oncanplay = null;
     };
 };
@@ -154,7 +154,7 @@ const get_video_src = (trait) => {
     try {
         return new URL(`../assets/videos/${file_name}`, import.meta.url).href;
     } catch (e) {
-        console.error("Error al generar la URL del vídeo:", e);
+        console.error("Error al generar la URL del vídeo.", e);
         return '';
     }
 }
@@ -382,7 +382,7 @@ const complete_test = () => {
     if (video_player.value) {
         video_player.value.load();
         video_player.value.muted = is_video_muted.value;
-        video_player.value.play().catch(e => console.warn("La reproducción automática del vídeo ha sido bloqueada:", e));
+        video_player.value.play().catch(e => console.warn("La reproducción automática del vídeo ha sido bloqueada.", e));
     }
 };
 
@@ -405,7 +405,7 @@ const toggle_mute_video = () => {
 
 const play_video = () => {
     if (video_player.value) {
-        video_player.value.play().catch(e => console.error("Error al reproducir el vídeo:", e));
+        video_player.value.play().catch(e => console.error("Error al reproducir el vídeo.", e));
     }
 };
 
@@ -537,7 +537,7 @@ onUnmounted(() => {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 6rem 4rem 4rem 4rem;
+    padding: 8rem 4rem 4rem 4rem;
     gap: 2rem;
     width: 100%;
     overflow-y: auto;
@@ -631,8 +631,9 @@ onUnmounted(() => {
             border-radius: 1.5rem;
             color: var(--color_light);
             background-color: var(--color_dark);
+            font-family: 'Nunito';
             font-size: clamp(1.25rem, 2.5dvw, 1.5rem);
-            font-weight: 450;
+            font-weight: 600;
             cursor: pointer;
 
             @media (hover: hover) {
@@ -679,7 +680,7 @@ onUnmounted(() => {
             li {
                 display: flex;
                 flex-direction: column;
-                gap: .5rem;
+                gap: .75rem;
                 font-size: clamp(1.25rem, 2.5dvw, 1.5rem);
                 font-weight: 450;
 
@@ -715,7 +716,8 @@ onUnmounted(() => {
         .video_controls {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: .75rem;
+            z-index: 1;
 
             .video_controls_button {
                 display: flex;
@@ -762,8 +764,9 @@ onUnmounted(() => {
                 border-radius: 1.5rem;
                 color: var(--color_dark);
                 border: 3px solid var(--color_dark);
+                font-family: 'Nunito';
                 font-size: clamp(1.25rem, 2.5dvw, 1.5rem);
-                font-weight: 450;
+                font-weight: 600;
                 cursor: pointer;
 
                 @media (hover: hover) {
@@ -785,8 +788,9 @@ onUnmounted(() => {
                 border-radius: 1.5rem;
                 color: var(--color_light);
                 background-color: var(--color_dark);
+                font-family: 'Nunito';
                 font-size: clamp(1.25rem, 2.5dvw, 1.5rem);
-                font-weight: 450;
+                font-weight: 600;
                 cursor: pointer;
 
                 @media (hover: hover) {
@@ -844,6 +848,7 @@ onUnmounted(() => {
 
 @media (max-width: 1024px) {
     .content {
+        padding: 6rem 4rem 4rem 4rem;
 
         .test_edit,
         .test_results {
@@ -854,6 +859,7 @@ onUnmounted(() => {
 
 @media (max-width: 768px) {
     .content {
+        padding: 4rem;
 
         .test_edit,
         .test_results {

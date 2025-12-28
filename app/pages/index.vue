@@ -36,7 +36,7 @@
     justify-content: center;
     width: 100%;
     min-height: 100%;
-    padding: 6rem 4rem 4rem 4rem;
+    padding: 8rem 4rem 4rem 4rem;
     overflow-y: auto;
     font-size: 2rem;
     user-select: none;
@@ -75,9 +75,10 @@
                         padding: 0 3.5rem 0 1rem;
                         margin-right: -3rem;
                         border-radius: 1.5rem;
+                        font-family: 'Nunito';
                         font-size: clamp(1.25rem, 2.5dvw, 1.5rem);
-                        font-weight: 450;
-                        background-color: var(--color_light);
+                        font-weight: 600;
+                        background: none;
                         border: 3px solid var(--color_dark);
                         transition: background-color 0s, border 0s;
                     }
@@ -91,7 +92,7 @@
                         border-radius: 1.5rem;
                         font-size: 2rem;
                         font-weight: 450;
-                        background-color: var(--color_light);
+                        background: none;
                         border: 3px solid var(--color_dark);
                         transition: background-color 0s, border 0s;
                     }
@@ -118,6 +119,8 @@
 
 @media (max-width: 1024px) {
     .content {
+        padding: 6rem 4rem 4rem 4rem;
+
         .about {
             width: 85%;
         }
@@ -126,6 +129,8 @@
 
 @media (max-width: 768px) {
     .content {
+        padding: 4rem;
+
         .about {
             width: 100%;
         }

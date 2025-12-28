@@ -8,19 +8,21 @@ html {
     body {
         main {
             h1 {
-                font-family: 'Parkinsans';
+                font-family: 'Nunito';
                 font-size: clamp(1.5rem, 2.5dvw, 2rem);
-                font-weight: 600;
+                font-weight: 700;
             }
 
             h2 {
+                font-family: 'Nunito';
                 font-size: clamp(1.25rem, 2.5dvw, 1.5rem);
-                font-weight: 500;
+                font-weight: 600;
             }
 
             h3 {
+                font-family: 'Nunito';
                 font-size: clamp(1rem, 2.5dvw, 1.25rem);
-                font-weight: 400;
+                font-weight: 500;
             }
         }
     }
